@@ -53,7 +53,7 @@ export default function Home() {
     formData.append('lossless', String(lossless));
 
     try {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/convert`, {
+      const response = await fetch(`https://imagetoolbackend.onrender.com/convert`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,
