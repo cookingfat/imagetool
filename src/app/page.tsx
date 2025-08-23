@@ -53,7 +53,7 @@ export default function Home() {
     formData.append('lossless', String(lossless));
 
     try {
-      const response = await fetch('http://localhost:3001/convert', {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/convert`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,
